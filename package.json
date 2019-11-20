@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-full-mongodb",
+  "version": "1.0.0",
+  "description": "Aplicacao Nodejs-full-mongoDB",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "author": "Luiz Holanda",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lholanda/nodejs-full-mongodb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lholanda/nodejs-full-mongodb/issues"
+  },
+  "homepage": "https://github.com/lholanda/nodejs-full-mongodb#readme",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "ejs": "^2.7.2",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.4"
+  }
+}

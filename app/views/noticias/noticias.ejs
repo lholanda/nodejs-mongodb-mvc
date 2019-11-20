@@ -1,0 +1,41 @@
+<h3>Página Noticias</h3>
+<table>
+    <!-- <th>ID</th>
+    <th>Titulo</th>
+    <th>Notícia</th>-->
+    <tr> 
+        <% for (chave in noticias){%>
+            <tr>
+                <td>
+                    <%= noticias[chave].id%>
+                </td>
+                <td>
+                    <%= noticias[chave].titulo%>
+                </td>
+                <td>
+                     <%= noticias[chave].noticia%>
+                </td>
+            </tr>
+        <%}%>
+    </tr>
+</table>
+
+<br>
+
+<table>
+        <tr>
+            <% for (var i=0; i<noticias.length; i++ ){%>
+                <tr>
+                    <td>
+                        <%= noticias[i].id%>
+                    </td>
+                    <td>
+                        <%= noticias[i].titulo%>
+                    </td>
+                    <td>
+                         <%= noticias[i].noticia%>
+                    </td>
+                </tr>
+            <%}%>
+        </tr>
+</table>
