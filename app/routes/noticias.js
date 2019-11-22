@@ -7,7 +7,7 @@ module.exports = function(app){
     });
 
     // rota 2 Noticia
-    app.get('/noticia/:id', function ( req, res ){  // rota
+    app.get('/noticia', function ( req, res ){  // rota
         app.app.controllers.noticias.noticia(app, req, res);
     });
 
