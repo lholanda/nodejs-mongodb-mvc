@@ -1,8 +1,11 @@
 <h3>Página Noticias</h3>
 <table>
-    <!-- <th>ID</th>
+    <th>ID</th>
     <th>Titulo</th>
-    <th>Notícia</th>-->
+    <th>Resumo</th>
+    <th>Autor</th>
+    <th>Notícia</th>
+    <%# <th>Data_noticia</th> %>
     <tr> 
         <% for (chave in noticias){%>
             <tr>
@@ -13,8 +16,17 @@
                     <%= noticias[chave].titulo%>
                 </td>
                 <td>
+                    <%= noticias[chave].resumo%>
+                </td>
+                <td>
+                    <%= noticias[chave].autor%>
+                </td>
+                <td>
                      <%= noticias[chave].noticia%>
                 </td>
+                <td>
+                    <%#= noticias[chave].data_noticia%>
+               </td>
             </tr>
         <%}%>
     </tr>
@@ -24,18 +36,18 @@
 
 <table>
         <tr>
-            <% for (var i=0; i<noticias.length; i++ ){%>
+            <%# for (var i=0; i<noticias.length; i++ ){%>
                 <tr>
                     <td>
-                        <%= noticias[i].id%>
+                        <%#= noticias[i].id%>
                     </td>
                     <td>
-                        <%= noticias[i].titulo%>
+                        <%#= noticias[i].titulo%>
                     </td>
                     <td>
-                         <%= noticias[i].noticia%>
+                         <%#= noticias[i].noticia%>
                     </td>
                 </tr>
-            <%}%>
+            <%#}%>
         </tr>
 </table>

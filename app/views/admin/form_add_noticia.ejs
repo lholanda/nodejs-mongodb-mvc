@@ -1,1 +1,47 @@
-<h3>Adicionar Notícias</h3>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário de Cadastro de Notícias</title>
+</head>
+
+<body>
+    <h4>Adicionar Noticias</h4>
+    <%# Verifica se há validacao de erros para exibir %>
+    <% if (validacao){ %>
+        <ul>
+            <%for (chave in validacao) {%>
+                <li>
+                    <%= validacao[chave].msg %>
+                </li>
+            <%}%>
+
+        </ul>
+    <% } %>
+
+
+    <form action="/noticias/salvar" method="post">
+   
+        <label>Título</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Título da Notícia" value="<%= noticia.titulo %>"/>
+        <br>
+        <label>Resumo</label>
+        <input type="text" id="resumo" name="resumo" placeholder="Resumo da Notícia" value="<%= noticia.resumo %>"" />
+        <br>
+        <label>Nome do Autor</label>
+        <input type="text" id="autor" name="autor" placeholder="Autor da Notícia"    value="<%= noticia.autor %>"/>
+        <br>
+        <label>Data dos Fatos</label>
+        <input type="date" id="data_noticia" name="data_noticia" placeholder="Data da Notícia" value="<%= noticia.data_noticia %>"" />
+        <br>
+        <label>Notícia</label>
+        <%# textarea não possui o campo value, devemos colocar < noticia.noticia > conforme abaixo %>
+        <textarea name="noticia" id="noticia" cols="30" rows="5"><%= noticia.noticia %></textarea>
+        <br>
+        <input type="submit" value="Enviar"/>
+    </form>
+</body>
+</html>
